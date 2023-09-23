@@ -13,9 +13,9 @@ AiCat is a chatbot designed to fetch answers from both Bard AI and OpenAI's GPT-
 - **Interactive Command-Line Interface**: Engaging ASCII art and user-friendly prompts make interactions pleasant.
 - **Error Handling**: If either platform (Bard AI or GPT-3) encounters an issue or fails to provide an answer, AiCat gracefully informs the user without crashing.
 
-## Docker Environment Setup
+## Docker Environment Setup (Recommended Method)
 
-AiCat comes with an easy-to-use Docker environment setup script named `env_setup`. This script:
+AiCat comes with an easy-to-use Docker environment setup script named `aicat`. This script:
 
 - Creates a `Dockerfile` and `docker-compose.yml` tailored to AiCat's requirements.
 - Sets up a Python environment with all the necessary packages.
@@ -26,10 +26,8 @@ AiCat comes with an easy-to-use Docker environment setup script named `env_setup
 
 1.  Ensure you have Docker and Docker Compose installed on your system.
 2.  Navigate to AiCat's main directory.
-3.  Execute the `env_setup` script: `./env_setup`
+3.  Execute the `aicat` script: `./aicat`
 4.  Follow the on-screen prompts.
-
-**Note**: The `env_setup` script will give you direct access to the Docker container. You can run your chatbot or perform other tasks within this containerized environment.
 
 ## Structure
 
