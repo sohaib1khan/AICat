@@ -12,11 +12,20 @@ pipeline {
             }
         }
         
+        stage('Generate Dockerfile') {
+            steps {
+                sh '''
+                    chmod +x env_setup
+                    ./env_setup
+                '''
+            }
+        }
+        
         stage('Build Docker Image') {
             steps {
                 sh '''
-                    # Build the Docker image locally
-                     docker build -t aicat .
+                    ls -al  // List the workspace content
+                    docker build -t aicat .
                 '''
             }
         }
