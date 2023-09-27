@@ -39,10 +39,10 @@ pipeline {
                         echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
 
                         # Tag the image; replace 'your-dockerhub-repo' with your Docker Hub repository name
-                        docker tag aicat:latest $DOCKERHUB_USERNAME/bluedreamz/aicat:latest
+                        docker tag aicat:latest $DOCKERHUB_USERNAME/aicat:latest
 
                         # Push the image to Docker Hub
-                        docker push $DOCKERHUB_USERNAME/bluedreamz/aicat:latest
+                        docker push $DOCKERHUB_USERNAME/aicat:latest
                     '''
                 }
             }
