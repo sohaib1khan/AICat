@@ -2,41 +2,34 @@ pipeline {
     agent any 
 
     environment {
-        // Define any environment variables if needed
+        MY_VARIABLE = 'some_value'
     }
-
+    
     stages {
-        stage('Checkout code') {
+        stage('Checkout') {
             steps {
-                // Get your code from the VCS
-                checkout scm 
+                checkout scm
             }
         }
-
-        stage('Run Script to Set Up Environment') {
+        
+        stage('Build and Deploy') {
             steps {
-                // Execute your script to set up the environment
-                sh './path_to_your_script.sh'
-            }
-        }
-
-        stage('Check Environment') {
-            steps {
-                // Execute any additional checks you might need
-                sh 'docker ps -a'
+                sh 'your build and deploy commands here'
             }
         }
     }
-
+    
     post {
         always {
-            // Actions to always run, even if the pipeline fails
+            sh 'echo "This will always run"'
         }
+        
         success {
-            // Actions to run only if the pipeline was successful
+            sh 'echo "This will run only if the pipeline is successful"'
         }
+        
         failure {
-            // Actions to run only if the pipeline failed
+            sh 'echo "This will run only if the pipeline fails"'
         }
     }
 }
