@@ -24,7 +24,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh '''
-                    ls -al  // List the workspace content
+                    ls -al
                     docker build -t aicat .
                 '''
             }
