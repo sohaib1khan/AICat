@@ -15,8 +15,8 @@ pipeline {
         stage('Generate Dockerfile') {
             steps {
                 sh '''
-                    chmod +x env_setup
-                    ./env_setup
+                    chmod +x jenkins_run
+                    ./jenkins_run
                 '''
             }
         }
