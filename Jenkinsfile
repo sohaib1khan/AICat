@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh '''
                     # Build the Docker image locally
-                   sudo docker build -t aicat .
+                     docker build -t aicat .
                 '''
             }
         }
