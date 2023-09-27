@@ -2,8 +2,9 @@ pipeline {
     agent any 
 
     environment {
-        MY_VARIABLE = 'some_value'
+        TIMESTAMP = "${sh(returnStdout: true, script: 'date +%Y%m%d%H%M%S').trim()}"
     }
+
     
     stages {
         stage('Checkout') {
@@ -14,7 +15,12 @@ pipeline {
         
         stage('Build and Deploy') {
             steps {
-                sh 'your build and deploy commands here'
+                sh '''
+                    # Actual build and deploy commands here
+                    # For example:
+                    # npm install
+                    # npm run build
+                '''
             }
         }
     }
