@@ -46,3 +46,8 @@ AiCat comes with an easy-to-use Docker environment setup script named `aicat`. T
 ## Work In Progress
 
 This project is actively being developed and improved. New features and refinements are on the horizon, so stay tuned for updates!
+
+
+
+## Demo 
+![AICat](https://github.com/sohaib1khan/AICat/blob/main/media/2023-09-30%2001-39-12.mkv)
